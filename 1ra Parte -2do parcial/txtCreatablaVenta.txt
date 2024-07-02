@@ -1,0 +1,20 @@
+CREATE TABLE ventas (
+ ven_id int(11) NOT NULL,
+ ven_mail varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+ ven_nombre varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+ ven_tipo varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+ ven_talla varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+ ven_stock int NOT NULL,
+ ven_fecha date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+ALTER TABLE ventas
+  ADD PRIMARY KEY (ven_id);
+
+ALTER TABLE ventas
+  MODIFY ven_id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+INSERT INTO ventas (ven_id,ven_mail, ven_nombre,ven_tipo ,ven_talla,ven_stock,ven_fecha) VALUES
+(1,"maxi@gmail",'maxi1','camiseta','S',23,01/05/2023),
+(2,"maxi@gmail",'maxi2','pantalon','L',12,01/05/2024),
+(3,"maxi@gmail",'maxi3','camiseta','M',12,01/05/2023);

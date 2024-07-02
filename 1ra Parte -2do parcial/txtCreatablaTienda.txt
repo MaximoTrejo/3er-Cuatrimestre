@@ -1,0 +1,22 @@
+CREATE TABLE tienda (
+ tie_id int(11) NOT NULL,
+ tie_nombre varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+ tie_precio int NOT NULL,
+ tie_tipo varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+ tie_talla varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+ tie_color varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+ tie_stock int NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+ALTER TABLE tienda
+  ADD PRIMARY KEY (tie_id);
+
+ALTER TABLE tienda
+  MODIFY tie_id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+INSERT INTO tienda (tie_id, tie_nombre,tie_precio, tie_tipo , tie_talla,  tie_color,tie_stock) VALUES
+(1, 'maxi',2500,'camiseta','S','rojo',23),
+(2, 'maxi2',10500,'pantalon','L','rojo',12),
+(3, 'maxi3',1500,'camiseta','M','rojo',12);
+
+

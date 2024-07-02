@@ -1,0 +1,17 @@
+id,numPedido,mail,nombre,tipo,talla,stockfecha
+1,0,ffff@,ffff,camiseta,L,4,0000-00-00
+2,0,maxi@gmail,maxi2,pantalon,L,12,0000-00-00
+3,0,maxi@gmail,maxi3,camiseta,M,12,2024-06-28
+4,0,hola,maxi3,camiseta,M,1,2024-06-28
+5,2362,hola,maxi3,camiseta,M,1,2024-06-29
+6,1582,hola,maxi3,camiseta,M,1,2024-06-29
+7,5611,hola,maxi3,camiseta,M,1,2024-06-29
+8,5342,hola,maxi,camiseta,M,1,2024-06-29
+9,8579,hola,maxi,camiseta,M,1,2024-06-29
+10,2173,hola,maxi,camiseta,M,1,2024-07-02
+11,3278,hola,maxi3,camiseta,M,1,2024-07-02
+12,5749,hola,palma2,camiseta,M,1,2024-07-02
+13,2260,hola,palma2,camiseta,M,1,2024-07-02
+14,8351,hola,palma2,camiseta,M,1,2024-07-02
+15,7682,hola,palma2,camiseta,M,1,2024-07-02
+16,4337,hola,palma2,camiseta,M,1,2024-07-02

@@ -1,0 +1,23 @@
+CREATE TABLE Usuarios (
+ usu_id int(11) NOT NULL,
+ usu_mail varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+ usu_nombre varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+ usu_perfil varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+ usu_clave varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+ usu_foto varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+     usu_fecha_alta varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+    usu_fecha_baja varchar(250) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+ALTER TABLE Usuarios
+  ADD PRIMARY KEY (usu_id);
+
+ALTER TABLE Usuarios
+  MODIFY usu_id int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+INSERT INTO usuarios (usu_id,usu_mail,usu_nombre,usu_perfil,usu_clave, usu_foto,usu_fecha_alta,usu_fecha_baja) VALUES
+(1, 'maxi@','Maxi12','cliente','123','N/A','1-7-2024','1-7-2024'),
+(2, 'maxi2@','Palmi12','admin','123','N/A','1-7-2024','1-7-2024'),
+(3, 'maxi3@','maxi13','admin','123','N/A','1-7-2024','1-7-2024');
+
+
