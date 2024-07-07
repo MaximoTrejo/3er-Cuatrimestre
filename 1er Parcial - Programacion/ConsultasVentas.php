@@ -15,9 +15,18 @@ $aTienda = Tienda::leerJson("tienda.json");
 
 
 
-
+//a
+echo "a"."\n";
 Venta::consultaFecha($fechaRecibida , $aVenta);
+//b
+echo "b"."\n";
 Venta::consultaUsuario($mail,$aVenta);
+//c
+echo "c"."\n";
 Venta::consultaPorTipo($tipo,$aVenta);
+//e
+echo "e"."\n";
 Tienda::consultaEntrePrecios($precioHasta,$precioDesde,$aTienda);
-
+//f
+echo "f"."\n";
+Venta::productoMasVendido($aVenta);

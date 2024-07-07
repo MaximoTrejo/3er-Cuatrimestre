@@ -17,6 +17,9 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 require_once './AltaVenta.php';
                 break;
 
+            case 'AltaConjunto':
+                require_once './AltaConjunto.php';
+                break;
             default:
                 echo "Parametro accion no permitido";
                 break;

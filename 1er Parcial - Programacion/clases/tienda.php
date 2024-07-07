@@ -261,4 +261,20 @@ class Tienda
     }
 
 
+    public static function buscarUltimoIdVenta($arrayObjs ){
+        
+        $ultimoId= 0;
+
+        foreach($arrayObjs as $obj){
+
+            if ($obj->_id_autoincremental > $ultimoId) {
+
+                $ultimoId = $obj->_id_autoincremental;
+            }
+
+        }
+        return $ultimoId;
+    }
+
+
 }

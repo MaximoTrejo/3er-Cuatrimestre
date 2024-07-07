@@ -335,7 +335,7 @@ class Venta{
                 if (copy($ruta_destinoOld, $ruta_destinoNew)) {
                     //elimina la venta 
                     unset($aVenta[$Key]);
-                    //elimina el archivo old 
+                    //elimina el archivo viejo
                     unlink($ruta_destinoOld);
                     //muestra que salio bien 
                     echo "Venta eliminada.<br>";
@@ -378,6 +378,45 @@ class Venta{
         } else {
             echo "<p>¡Algo salió mal!</p>";
         }
+    }
+
+
+
+    public static function buscarUltimoIdVenta($arrayObjs ){
+        
+        $ultimoId= 0;
+
+        foreach($arrayObjs as $obj){
+
+            if ($obj->_id_autoincremental > $ultimoId) {
+
+                $ultimoId = $obj->_id_autoincremental;
+            }
+
+        }
+        return $ultimoId;
+    }
+
+
+    public static function productoMasVendido($arrayVentas) {
+        $conteoProductos = [];
+        foreach ($arrayVentas as $venta) {
+            $nombreProducto = $venta->_nombre;  
+            if (isset($conteoProductos[$nombreProducto])) {
+                $conteoProductos[$nombreProducto]++;
+            } else {
+                $conteoProductos[$nombreProducto] = 1;
+            }
+        }
+        $productoMasVendido = null;
+        $maxVentas = 0;
+        foreach ($conteoProductos as $nombreProducto => $cantidadVentas) {
+            if ($cantidadVentas > $maxVentas) {
+                $maxVentas = $cantidadVentas;
+                $productoMasVendido = $nombreProducto;
+            }
+        }
+        echo $productoMasVendido;
     }
 }
 
