@@ -17,7 +17,6 @@ $carpeta_archivos = './ImagenesDeRopa/2024/';
 $nombreJson = 'tienda.json';
 
 
-
 $aTienda = Tienda::leerJson($nombreJson);
 
 $aTienda = Tienda::agregarObjets($nombre,$precio,$tipo,$talla,$color,$stock,$aTienda);

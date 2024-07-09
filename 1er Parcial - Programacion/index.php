@@ -20,6 +20,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
             case 'AltaConjunto':
                 require_once './AltaConjunto.php';
                 break;
+
+            case 'AltaConjuntoVenta':
+                require_once './AltaConjuntoVenta.php';
+                break;
             default:
                 echo "Parametro accion no permitido";
                 break;
@@ -30,6 +34,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
         switch ($_GET['accion']) {
             case 'ConsultasVentas':
                 require_once './ConsultasVentas.php';
+                break;
+
+            case 'ConsultasConjuntos':
+                require_once './ConsultaConjuntos.php';
                 break;
         }
         break;
@@ -56,7 +64,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
                 break;
         }
         break;
-    
+
 
     default:
         echo "Verbo accion no permitido";
